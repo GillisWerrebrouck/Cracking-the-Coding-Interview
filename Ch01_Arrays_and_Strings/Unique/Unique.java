@@ -1,7 +1,5 @@
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Hashtable;
-import java.util.Vector;
 
 /**
  * Algorithm to check if a string (assuming it's an ASCI string) has all unique characters.
