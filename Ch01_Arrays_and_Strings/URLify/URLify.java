@@ -33,9 +33,6 @@ public class URLify {
 
         Integer newLength = spaces*2 + trueLength;
         char[] newUrl = new char[newLength];
-        for(Integer index = 0; index < trueLength; index++) {
-            newUrl[index] = url[index];
-        }
 
         Integer newUrlPointer = newLength - 1;
         for(Integer index = trueLength-1; index >= 0; index--) {
