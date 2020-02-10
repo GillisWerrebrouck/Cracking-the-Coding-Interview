@@ -7,7 +7,6 @@ import java.util.Arrays;
 
 public class Palindrome_Permutation {
     public static void main(String args[]) {
-        IsPalindromeOfPermutation(args[0]);
         System.out.println("The strings \"" + args[0] + "\" is" + (IsPalindromeOfPermutation(args[0]) ? "" : "n't") + " a permutation of a palindrome.");
     }
 
