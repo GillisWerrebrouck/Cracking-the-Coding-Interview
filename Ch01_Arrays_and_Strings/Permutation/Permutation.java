@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 public class Permutation {
     public static void main(String args[]) {
-        System.out.println("The strings \"" + args[0] + "\" and \"" + args[1] + "\" are" + (IsPermutation(args[0], args[1]) == false ? "n't" : "") + " permutations.");
+        System.out.println("The strings \"" + args[0] + "\" and \"" + args[1] + "\" are" + (!IsPermutation(args[0], args[1]) ? "n't" : "") + " permutations.");
     }
 
     private static String sort(String str) {

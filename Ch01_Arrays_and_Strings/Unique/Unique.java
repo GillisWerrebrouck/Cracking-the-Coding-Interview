@@ -8,8 +8,8 @@ import java.util.Hashtable;
 
 public class Unique {
     public static void main(String args[]) {
-        System.out.println("[METHOD 1]\tThe string \"" + args[0] + "\" " + (IsUnique_1(args[0]) == false ? "doesn't have" : "has") + " all unique characters.");
-        System.out.println("[METHOD 2]\tThe string \"" + args[0] + "\" " + (IsUnique_2(args[0]) == false ? "doesn't have" : "has") + " all unique characters.");
+        System.out.println("[METHOD 1]\tThe string \"" + args[0] + "\" " + (!IsUnique_1(args[0]) ? "doesn't have" : "has") + " all unique characters.");
+        System.out.println("[METHOD 2]\tThe string \"" + args[0] + "\" " + (!IsUnique_2(args[0]) ? "doesn't have" : "has") + " all unique characters.");
     }
 
     // method using a hashtable
