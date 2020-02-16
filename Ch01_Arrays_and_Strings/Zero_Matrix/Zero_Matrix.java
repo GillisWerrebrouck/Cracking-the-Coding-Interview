@@ -17,16 +17,16 @@ public class Zero_Matrix {
             N = Integer.parseInt(args[1]);
         }
 
-        Integer[][] matrix = GenerateNxNMatrix(M, N);
+        Integer[][] matrix = generateNxNMatrix(M, N);
         System.out.print("Original matrix:\n");
-        PrintMatrix(matrix);
-        SetZeros(matrix);
+        printMatrix(matrix);
+        setZeros(matrix);
         System.out.print("After setting zeros:\n");
-        PrintMatrix(matrix);
+        printMatrix(matrix);
     }
 
     // generate a random MxN matrix
-    private static Integer[][] GenerateNxNMatrix(Integer M, Integer N) {
+    private static Integer[][] generateNxNMatrix(Integer M, Integer N) {
         Integer[][] matrix = new Integer[M][N];
         Random random = new Random();
 
@@ -39,7 +39,7 @@ public class Zero_Matrix {
         return matrix;
     }
 
-    private static void PrintMatrix(Integer[][] matrix) {
+    private static void printMatrix(Integer[][] matrix) {
         for(Integer row = 0; row < matrix.length; row++) {
             System.out.print("| ");
             for(Integer col = 0; col < matrix[row].length; col++) {
@@ -50,7 +50,7 @@ public class Zero_Matrix {
         System.out.print("\n");
     }
 
-    private static void SetZeros(Integer[][] matrix) {
+    private static void setZeros(Integer[][] matrix) {
         boolean firstRowHasZero = false;
         boolean firstColHasZero = false;
 

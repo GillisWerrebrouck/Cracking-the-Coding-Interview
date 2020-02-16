@@ -8,12 +8,12 @@ import java.util.Hashtable;
 
 public class Unique {
     public static void main(String args[]) {
-        System.out.println("[METHOD 1]\tThe string \"" + args[0] + "\" " + (!IsUnique_1(args[0]) ? "doesn't have" : "has") + " all unique characters.");
-        System.out.println("[METHOD 2]\tThe string \"" + args[0] + "\" " + (!IsUnique_2(args[0]) ? "doesn't have" : "has") + " all unique characters.");
+        System.out.println("[METHOD 1]\tThe string \"" + args[0] + "\" " + (!isUnique_1(args[0]) ? "doesn't have" : "has") + " all unique characters.");
+        System.out.println("[METHOD 2]\tThe string \"" + args[0] + "\" " + (!isUnique_2(args[0]) ? "doesn't have" : "has") + " all unique characters.");
     }
 
     // method using a hashtable
-    private static boolean IsUnique_1(String str) {
+    private static boolean isUnique_1(String str) {
         // cannot be longer then extended ASCI range to have all unique characters
         if (str.length() > 256) return false;
 
@@ -33,7 +33,7 @@ public class Unique {
     }
 
     // method without additional data structures
-    private static boolean IsUnique_2(String str) {
+    private static boolean isUnique_2(String str) {
         // cannot be longer then extended ASCI range to have all unique characters
         if (str.length() > 256) return false;
 

@@ -10,10 +10,10 @@ public class One_Away {
             return;
         }
 
-        System.out.println("The strings \"" + args[0] + "\" is" + (IsOneAway(args[0], args[1]) ? "" : "n't") + " one edit (insert, remove, replace) away from \"" + args[1] + "\".");
+        System.out.println("The strings \"" + args[0] + "\" is" + (isOneAway(args[0], args[1]) ? "" : "n't") + " one edit (insert, remove, replace) away from \"" + args[1] + "\".");
     }
 
-    private static boolean IsOneAway(String str1, String str2) {
+    private static boolean isOneAway(String str1, String str2) {
         if(Math.abs(str1.length()-str2.length()) > 1) {
             return false;
         }

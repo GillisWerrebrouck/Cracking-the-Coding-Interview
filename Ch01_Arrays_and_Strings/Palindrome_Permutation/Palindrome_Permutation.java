@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 public class Palindrome_Permutation {
     public static void main(String args[]) {
-        System.out.println("The strings \"" + args[0] + "\" is" + (IsPalindromeOfPermutation(args[0]) ? "" : "n't") + " a permutation of a palindrome.");
+        System.out.println("The strings \"" + args[0] + "\" is" + (isPalindromeOfPermutation(args[0]) ? "" : "n't") + " a permutation of a palindrome.");
     }
 
     private static String sort(String str) {
@@ -16,7 +16,7 @@ public class Palindrome_Permutation {
         return new String(sorted);
     }
 
-    private static boolean IsPalindromeOfPermutation(String str) {
+    private static boolean isPalindromeOfPermutation(String str) {
         String sorted = sort(str.toLowerCase());
         
         // boolean to know if an odd count of a char has occured or not, this can at most happen once in a palindrome

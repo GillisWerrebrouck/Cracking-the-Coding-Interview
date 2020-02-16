@@ -9,16 +9,16 @@ public class Rotate_Matrix {
     public static void main(String args[]) {
         Integer N = args.length > 0 ? Integer.parseInt(args[0]) : 4;
 
-        Integer[][] matrix = GenerateNxNMatrix(N);
+        Integer[][] matrix = generateNxNMatrix(N);
         System.out.print("Original matrix:\n");
-        PrintMatrix(matrix);
-        RotateNxNMatrix(matrix);
+        printMatrix(matrix);
+        rotateNxNMatrix(matrix);
         System.out.print("Rotated matrix (90 degrees clockwise):\n");
-        PrintMatrix(matrix);
+        printMatrix(matrix);
     }
 
     // generate a random NxN matrix
-    private static Integer[][] GenerateNxNMatrix(Integer N) {
+    private static Integer[][] generateNxNMatrix(Integer N) {
         Integer[][] matrix = new Integer[N][N];
         Random random = new Random();
 
@@ -31,7 +31,7 @@ public class Rotate_Matrix {
         return matrix;
     }
 
-    private static void PrintMatrix(Integer[][] matrix) {
+    private static void printMatrix(Integer[][] matrix) {
         for(Integer row = 0; row < matrix.length; row++) {
             System.out.print("| ");
             for(Integer col = 0; col < matrix[row].length; col++) {
@@ -42,7 +42,7 @@ public class Rotate_Matrix {
         System.out.print("\n");
     }
 
-    private static boolean RotateNxNMatrix(Integer[][] matrix) {
+    private static boolean rotateNxNMatrix(Integer[][] matrix) {
         if(matrix.length == 0 || matrix.length != matrix[0].length) {
             return false;
         }

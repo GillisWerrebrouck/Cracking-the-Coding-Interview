@@ -10,7 +10,7 @@ public class String_Compression {
             return;
         }
 
-        System.out.println(Compress(args[0]));
+        System.out.println(compress(args[0]));
     }
 
     private static Integer countCompressionLength(String original) {
@@ -28,7 +28,7 @@ public class String_Compression {
         return compressionCount;
     }
 
-    private static String Compress(String original) {
+    private static String compress(String original) {
         Integer compressionLength = countCompressionLength(original);
         if(compressionLength >= original.length()) {
             return original;
