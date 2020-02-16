@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 /**
  * Algorithm to check if a string is one edit (insert, remove, replace) away from another string.
  * @author Gillis Werrebrouck
