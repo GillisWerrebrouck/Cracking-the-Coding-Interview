@@ -35,9 +35,9 @@ public class Rotate_Matrix {
         for(Integer row = 0; row < matrix.length; row++) {
             System.out.print("| ");
             for(Integer col = 0; col < matrix[row].length; col++) {
-                System.out.print(matrix[row][col] + (col == matrix[0].length-1 ? "" : "\t"));
+                System.out.print(String.format("%3s ", matrix[row][col]));
             }
-            System.out.print(" |\n");
+            System.out.print("|\n");
         }
         System.out.print("\n");
     }
