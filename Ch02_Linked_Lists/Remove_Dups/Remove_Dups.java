@@ -5,10 +5,8 @@ import CtCILibrary.LinkedListNode;
 
 /**
  * Algorithm to remove duplicates in a linked list.
- * 
  * @author Gillis Werrebrouck
  */
-
 
 public class Remove_Dups {
     public static void main(String args[]) {
