@@ -16,4 +16,16 @@ public class LinkedListNode {
         }
         n.next = end;
     }
+
+    public int length() {
+        int length = 0;
+        LinkedListNode node = this;
+
+        while(node != null) {
+            length++;
+            node = node.next;
+        }
+
+        return length;
+    }
 }
