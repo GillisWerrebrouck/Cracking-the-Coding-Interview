@@ -26,13 +26,6 @@ public class Sum_Lists {
         sum.print();
     }
 
-    private static void printLinkedList(LinkedListNode node) {
-        while(node != null) {
-            System.out.print(node.data + (node.next != null ? " -> " : "\n"));
-            node = node.next;
-        }
-    }
-
     // numbers are represented from back to front
     private static LinkedListNode add_1(LinkedListNode number1, LinkedListNode number2) {
         int overflow = 0;
