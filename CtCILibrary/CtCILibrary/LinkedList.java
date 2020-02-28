@@ -27,6 +27,7 @@ public class LinkedList {
     public void appendToTail(int d) {
         if(this.node != null) {
             this.node.appendToTail(d);
+            this.length++;
         }
     }
     
