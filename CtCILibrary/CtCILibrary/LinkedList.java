@@ -24,14 +24,23 @@ public class LinkedList {
         length++;
     }
 
-    public void appendToTail(int d) {
+    public void appendToTail(LinkedListNode node) {
         if(this.node != null) {
-            this.node.appendToTail(d);
-            this.length++;
+            this.node.appendToTail(node);
+            this.setLength();
+        } else {
+            this.node = node;
+            this.length = 1;
         }
+    }
+
+    public void appendToTail(int d) {
+        LinkedListNode node = new LinkedListNode(d);
+        this.appendToTail(node);
     }
     
     public void setLength() {
+        this.length = 0;
         LinkedListNode node = this.node;
 
         while(node != null) {
