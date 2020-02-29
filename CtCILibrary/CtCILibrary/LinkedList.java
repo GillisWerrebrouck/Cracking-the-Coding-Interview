@@ -41,9 +41,13 @@ public class LinkedList {
     public void print() {
         LinkedListNode node = this.node;
         LinkedListNode endNode = this.detectLoop();
-        
-        while(node != endNode) {
-            System.out.print(node.data + (node.next != null ? " -> " : "\n"));
+        boolean hasEncounteredIntersection = endNode == null;
+
+        while(node != endNode || (node == endNode && !hasEncounteredIntersection)) {
+            if(node == endNode) {
+                hasEncounteredIntersection = true;
+            }
+            System.out.print(node.data + (node.next != endNode || (node.next == endNode && !hasEncounteredIntersection) ? " -> " : "\n"));
             node = node.next;
         }
     }
@@ -79,8 +83,12 @@ public class LinkedList {
         this.length = 0;
         LinkedListNode node = this.node;
         LinkedListNode endNode = this.detectLoop();
+        boolean hasEncounteredIntersection = endNode == null;
 
-        while(node != endNode) {
+        while(node != endNode || (node == endNode && !hasEncounteredIntersection)) {
+            if(node == endNode) {
+                hasEncounteredIntersection = true;
+            }
             this.length++;
             node = node.next;
         }

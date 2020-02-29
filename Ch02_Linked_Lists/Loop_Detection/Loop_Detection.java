@@ -27,7 +27,7 @@ public class Loop_Detection {
         if(startOfLoop != null) {
             System.out.println("Loop detected with start of loop at; " + startOfLoop.data);
         } else {
-            System.out.print("No loop detected in list; ");
+            System.out.println("No loop detected in list");
         }
         list.print();
     }
