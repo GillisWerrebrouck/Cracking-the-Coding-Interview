@@ -11,12 +11,12 @@ public class Check_BST {
         TreeNode tree = getBinaryTree();
         tree.print();
 
-        System.out.println("Tree is" + (isBST(tree, Integer.MIN_VALUE, Integer.MAX_VALUE) ? "" : "n't")  + " a valid binary search tree");
+        System.out.println("Tree is" + (isBST(tree, null, null) ? "" : "n't")  + " a valid binary search tree");
     }
 
-    private static boolean isBST(TreeNode node, int rangeStart, int rangeEnd) {
+    private static boolean isBST(TreeNode node, Integer rangeStart, Integer rangeEnd) {
         if(node != null) {
-            if(rangeStart >= node.value || node.value > rangeEnd) {
+            if((rangeStart != null && rangeStart >= node.value) || (rangeEnd != null && node.value > rangeEnd)) {
                 return false;
             }
 
