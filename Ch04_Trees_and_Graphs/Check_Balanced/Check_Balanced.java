@@ -1,7 +1,7 @@
 import CtCILibrary.TreeNode;
 
 /**
- * Algorithm to check if a binary tree is balanced using a version post-order tree traversal.
+ * Algorithm to check if a binary tree is balanced using a variation of post-order tree traversal.
  * Balanced means that the heights of the two dubstrees of any node never differ by more than one.
  * 
  * @author Gillis Werrebrouck
