@@ -7,9 +7,15 @@ public class TreeNode {
     public int value;
     public TreeNode left = null;
     public TreeNode right = null;
+    public TreeNode parent = null;
 
     public TreeNode(int value) {
         this.value = value;
+    }
+
+    public TreeNode(int value, TreeNode parent) {
+        this.value = value;
+        this.parent = parent;
     }
 
     public void print() {
