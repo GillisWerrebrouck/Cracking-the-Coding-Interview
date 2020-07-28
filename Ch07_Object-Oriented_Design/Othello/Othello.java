@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * Object-oriented design for a the game Othello.
+ * Object-oriented design for the game Othello.
  * 
  * @author Gillis Werrebrouck
  */
