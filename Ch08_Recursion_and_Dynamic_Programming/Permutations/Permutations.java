@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * Algorithm to 
+ * Algorithm to compute all permutations with or without duplicates.
  * 
  * @author Gillis Werrebrouck
  */
