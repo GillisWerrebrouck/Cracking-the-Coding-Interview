@@ -13,13 +13,14 @@ public class Sorted_Matrix_Search {
             { 16, 17, 18, 19, 20 },
             { 21, 22, 23, 24, 25 }
         };
+
         int value = 22;
         Position position = binary_matrix_search(matrix, value);
-        
-        if (position.row == -1 && position.col == -1) {
-            System.out.println("the value " + value + " could not be found in the matrix");
-        } else {
+
+        if (position.isValid()) {
             System.out.println("the value " + value + " was found at position [" + position.row + ", " + position.col + "]");
+        } else {
+            System.out.println("the value " + value + " could not be found in the matrix");
         }
     }
 
@@ -40,17 +41,20 @@ public class Sorted_Matrix_Search {
         if (matrix[middle_row][middle_col] == value) {
             return new Position(middle_row, middle_col);
         } else if (matrix[middle_row][middle_col] > value) {
-            block_1 = binary_matrix_search(matrix, value, top_left, new Position(middle_row - 1, bottom_right.col));
-            block_2 = binary_matrix_search(matrix, value, new Position(middle_row, top_left.col), new Position(bottom_right.row, middle_col - 1));
+            block_1 = binary_matrix_search(matrix, value, new Position(middle_row, top_left.col), new Position(bottom_right.row, middle_col - 1));
+            if (block_1.isValid()) {
+                return block_1;
+            }
+            block_2 = binary_matrix_search(matrix, value, top_left, new Position(middle_row - 1, bottom_right.col));
         } else {
-            block_1 = binary_matrix_search(matrix, value, new Position(middle_row + 1, top_left.col), bottom_right);
-            block_2 = binary_matrix_search(matrix, value, new Position(top_left.row, middle_col + 1), new Position(middle_row, bottom_right.col));
+            block_1 = binary_matrix_search(matrix, value, new Position(top_left.row, middle_col + 1), new Position(middle_row, bottom_right.col));
+            if (block_1.isValid()) {
+                return block_1;
+            }
+            block_2 = binary_matrix_search(matrix, value, new Position(middle_row + 1, top_left.col), bottom_right);
         }
 
-        if (block_1.row != -1 && block_1.col != -1) {
-            return block_1;
-        }
-        if (block_2.row != -1 && block_2.col != -1) {
+        if (block_2.isValid()) {
             return block_2;
         }
         return new Position(-1, -1);
@@ -64,5 +68,9 @@ class Position {
     public Position(int row, int col) {
         this.row = row;
         this.col = col;
+    }
+
+    public boolean isValid() {
+        return this.row != -1 && this.col != -1;
     }
 }
