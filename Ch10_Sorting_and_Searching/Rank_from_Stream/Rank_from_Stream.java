@@ -1,5 +1,5 @@
 /**
- * Algorithm to 
+ * Algorithm to track the rank of numbers in a stream by using a binary search tree.
  * 
  * @author Gillis Werrebrouck
  */
