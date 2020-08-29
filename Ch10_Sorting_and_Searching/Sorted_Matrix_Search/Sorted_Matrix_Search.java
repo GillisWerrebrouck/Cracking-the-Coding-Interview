@@ -13,7 +13,7 @@ public class Sorted_Matrix_Search {
             { 16, 17, 18, 19, 20 },
             { 21, 22, 23, 24, 25 }
         };
-        int value = 193;
+        int value = 22;
         Position position = binary_matrix_search(matrix, value);
         
         if (position.row == -1 && position.col == -1) {
@@ -35,7 +35,6 @@ public class Sorted_Matrix_Search {
         int middle_row = top_left.row + (bottom_right.row - top_left.row) / 2;
         int middle_col = top_left.col + (bottom_right.col - top_left.col) / 2;
         Position middle = new Position(middle_row, middle_col);
-        System.out.print(matrix[middle.row][middle.col] + "   ");
 
         if (matrix[middle_row][middle_col] == value) {
             return new Position(middle_row, middle_col);
