@@ -34,16 +34,18 @@ public class Sorted_Matrix_Search {
 
         int middle_row = top_left.row + (bottom_right.row - top_left.row) / 2;
         int middle_col = top_left.col + (bottom_right.col - top_left.col) / 2;
-        Position middle = new Position(middle_row, middle_col);
+
+        Position block_1, block_2;
 
         if (matrix[middle_row][middle_col] == value) {
             return new Position(middle_row, middle_col);
         } else if (matrix[middle_row][middle_col] > value) {
-            return binary_matrix_search(matrix, value, top_left, middle);
+            block_1 = binary_matrix_search(matrix, value, top_left, new Position(middle_row - 1, bottom_right.col));
+            block_2 = binary_matrix_search(matrix, value, new Position(middle_row, top_left.col), new Position(bottom_right.row, middle_col - 1));
+        } else {
+            block_1 = binary_matrix_search(matrix, value, new Position(middle_row + 1, top_left.col), bottom_right);
+            block_2 = binary_matrix_search(matrix, value, new Position(top_left.row, middle_col + 1), new Position(middle_row, bottom_right.col));
         }
-        
-        Position block_1 = binary_matrix_search(matrix, value, new Position(middle_row + 1, top_left.col), bottom_right);
-        Position block_2 = binary_matrix_search(matrix, value, new Position(top_left.row, middle_col + 1), new Position(middle_row, bottom_right.col));
 
         if (block_1.row != -1 && block_1.col != -1) {
             return block_1;
