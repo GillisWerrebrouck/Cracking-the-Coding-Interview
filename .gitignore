@@ -1,2 +1,8 @@
 # Compiled class file
 *.class
+
+# Compiled cpp files
+*.exe
+
+# vscode
+.vscode
